@@ -2,16 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ad90f2f3-57a5-43de-ad02-33cee316266e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/CartButtons.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CartButtons.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navbar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Sidebar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Sidebar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/context/products_context.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/context/products_context.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducers/products_reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/products_reducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PageHero.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PageHero.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/AboutPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/AboutPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/CheckoutPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/CheckoutPage.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +50,7 @@
       <option name="presentableId" value="Default" />
       <updated>1610815253021</updated>
       <workItem from="1610815256346" duration="3550000" />
-      <workItem from="1610852511236" duration="2763000" />
+      <workItem from="1610852511236" duration="3730000" />
     </task>
     <servers />
   </component>
