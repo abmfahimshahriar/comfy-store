@@ -58,7 +58,7 @@ export const ProductsProvider = ({ children }) => {
       dispatch({type: GET_SINGLE_PRODUCT_SUCCESS, payload: singleProduct});
     }
     catch (error) {
-      dispatch({type: {GET_SINGLE_PRODUCT_ERROR}});
+      dispatch({type: GET_SINGLE_PRODUCT_ERROR});
     }
   }
 
@@ -71,6 +71,7 @@ export const ProductsProvider = ({ children }) => {
       ...state,
       openSidebar,
       closeSidebar,
+      fetchSingleProduct,
     }}>
       {children}
     </ProductsContext.Provider>
