@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="ad90f2f3-57a5-43de-ad02-33cee316266e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Stars.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Stars.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/AddToCart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AddToCart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/AmountButtons.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AmountButtons.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/SingleProductPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/SingleProductPage.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
