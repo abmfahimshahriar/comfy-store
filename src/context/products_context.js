@@ -75,7 +75,7 @@ export const ProductsProvider = ({ children }) => {
     }}>
       {children}
     </ProductsContext.Provider>
-  )
+  );
 }
 // make sure use
 export const useProductsContext = () => {
