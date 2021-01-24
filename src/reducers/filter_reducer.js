@@ -76,7 +76,7 @@ const filter_reducer = (state, action) => {
     return {
       ...state,
       filters: {
-        ...state,
+        ...state.filters,
         [name]: value,
       }
     }
