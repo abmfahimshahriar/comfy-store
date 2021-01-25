@@ -87,6 +87,21 @@ const filter_reducer = (state, action) => {
     return {...state};
   }
 
+  if (action.type === CLEAR_FILTERS) {
+    return {
+      ...state,
+      filters: {
+        ...state.filters,
+        text: '',
+        category: 'all',
+        company: 'all',
+        color: 'all',
+        price: state.filters.maxPrice,
+        shipping: false,
+      }
+    }
+  }
+
 
   return state
   throw new Error(`No Matching "${action.type}" - action type`)

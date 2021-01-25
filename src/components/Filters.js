@@ -112,7 +112,15 @@ const Filters = () => {
           <p className="price">{formatPrice(price)}</p>
           <input type="range" name="price" onChange={updateFilters} min={minPrice} max={maxPrice} value={price}/>
         </div>
+
+        {/*free shipping filter*/}
+        <div className="form-control shipping">
+          <label htmlFor="shipping">free shipping</label>
+          <input type="checkbox" name="shipping" id="shipping" onChange={updateFilters} checked={shipping}/>
+        </div>
         </form>
+
+        <button type="button" className="clear-btn" onClick={clearFilters}>clear filters</button>
       </div>
     </Wrapper>
   );
