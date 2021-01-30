@@ -5,6 +5,7 @@ import {
   REMOVE_CART_ITEM,
   TOGGLE_CART_ITEM_AMOUNT,
 } from '../actions'
+import {act} from "@testing-library/react";
 
 const cart_reducer = (state, action) => {
   if (action.type === ADD_TO_CART) {
@@ -85,6 +86,25 @@ const cart_reducer = (state, action) => {
       ...state,
       cart: tempCart,
     };
+  }
+
+  if (action.type === COUNT_CART_TOTALS) {
+    const {totalItems, totalAmount} = state.cart.reduce((total,cartItem) => {
+      const {price, amount} = cartItem;
+      total.totalItems += amount;
+      total.totalAmount += price * amount;
+
+      return total;
+    }, {
+      totalItems: 0,
+      totalAmount: 0,
+    });
+
+    return {
+      ...state,
+      totalItems,
+      totalAmount,
+    }
   }
 
   return state
