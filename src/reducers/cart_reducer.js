@@ -77,9 +77,7 @@ const cart_reducer = (state, action) => {
           return {...item, amount: newAmount};
         }
       }
-      else {
-        return item;
-      }
+      return item;
     });
 
     return {
@@ -107,7 +105,6 @@ const cart_reducer = (state, action) => {
     }
   }
 
-  return state
   throw new Error(`No Matching "${action.type}" - action type`)
 }
 
