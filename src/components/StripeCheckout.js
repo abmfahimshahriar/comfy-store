@@ -47,7 +47,19 @@ const CheckoutForm = () => {
   const elements = useElements();
 
   const createPaymentIntent = async () => {
-    console.log('hello from stripe checkout');
+    try {
+      const data = await axios.post(
+          '/.netlify/functions/create-payment-intent',
+          JSON.stringify({
+            cart,
+            shippingFee,
+            totalAmount
+          })
+      );
+    }
+    catch (e) {
+
+    }
   }
   useEffect(() => {
     createPaymentIntent();
