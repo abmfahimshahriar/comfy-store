@@ -48,7 +48,7 @@ const CheckoutForm = () => {
 
   const createPaymentIntent = async () => {
     try {
-      const data = await axios.post(
+      const {data} = await axios.post(
           '/.netlify/functions/create-payment-intent',
           JSON.stringify({
             cart,
@@ -56,9 +56,10 @@ const CheckoutForm = () => {
             totalAmount
           })
       );
+      setClientSecret(data.clientSecret);
     }
     catch (e) {
-
+      // console.log(e.response);
     }
   }
   useEffect(() => {
@@ -66,16 +67,52 @@ const CheckoutForm = () => {
   },[]);
 
   const handleChange = async (event) => {
-
+    setDisabled(event.empty);
+    setError(event.error? event.error.message : '');
   }
   const handleSubmit = async (ev) => {
+    ev.preventDefault();
+    setProcessing(true);
+    const payload = await stripe.confirmCardPayment(clientSecret,{
+      payment_method: {
+        card: elements.getElement(CardElement)
+      }
+    });
+    if (payload.error) {
+      setError(`Payment failed ${payload.error.message}`);
+      setProcessing(false);
+    }
+    else {
+      setError(null);
+      setProcessing(false);
+      setSucceeded(true);
 
+      setTimeout(() => {
+        clearCart();
+        history.push('/');
+      }, 5000);
+    }
   }
 
   return (
       <div>
+        {
+          succeeded? (
+              <article>
+                <h4>Thank you</h4>
+                <h4>Your payment was successful</h4>
+                <h4>Redirection to home page shortly</h4>
+              </article>
+          ) : (
+              <article>
+                <h4>Hello, {myUser && myUser.name}</h4>
+                <p>Your total is {formatPrice(shippingFee + totalAmount)}</p>
+                <p>Test card number: 4242 4242 4242 4242</p>
+              </article>
+          )
+        }
         <form id="payment-form" onSubmit={handleSubmit}>
-          <CardElement id="card-element" options={cardStyle} onChange={handleChange()} />
+          <CardElement id="card-element" options={cardStyle} onChange={handleChange} />
           <button disabled={processing || disabled || succeeded} id="submit">
             <span id="button-text">
               {processing ? <div className="spinner" id="spinner"></div>: 'Pay'}
